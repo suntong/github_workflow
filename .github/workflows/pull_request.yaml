@@ -6,8 +6,4 @@ jobs:
     steps:
       - name: Check for assignee
         run: echo "${{ github.event_name }}"
-      - run: echo "${{ github.event.action }}"
-      - name: Check for assignee
-        if: ${{ github.event_name == 'pull_request' && github.event.action == 'unassigned' }}
-        run: echo "This pull-request doesnot have assignee added"
 
