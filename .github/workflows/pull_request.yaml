@@ -3,6 +3,7 @@ on: pull_request
 jobs:
   pull-request:
     runs-on: ubuntu-latest
+    addAssignees: author
     steps:
       - name: Check for event name
         run: echo "${{ github.event_name }}"
