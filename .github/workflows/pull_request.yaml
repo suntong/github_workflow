@@ -7,5 +7,5 @@ jobs:
       - name: Check for event name
         run: echo "${{ github.event_name }}"
       - name: Check for event action
-        run: echo "{{ github.event.action }}"
+        run: echo "${{ github.event.action }}"
 
