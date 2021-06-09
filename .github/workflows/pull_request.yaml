@@ -1,5 +1,5 @@
 name: Add reviewer(s) and assignee for Pull requests.
-on: pull_request
+on: push
 jobs:
   pull-request:
     runs-on: ubuntu-latest
