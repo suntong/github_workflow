@@ -1,0 +1,13 @@
+name: Add reviewer(s) and assignee for Pull requests.
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for assignee
+        if: ${{ github.event_name == 'pull_request' && github.event.action == 'unassigned' }}
+        run: run "This pull-request doesnot have assignee added"
+
