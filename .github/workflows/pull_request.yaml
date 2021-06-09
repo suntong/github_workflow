@@ -11,4 +11,3 @@ jobs:
         run: echo "${{ github.event.action }}"
       - name: Add assignees
         uses: kentaro-m/auto-assign-action@v1.1.2
-        addAssignees: author
