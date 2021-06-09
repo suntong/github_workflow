@@ -4,6 +4,8 @@ jobs:
   pull-request:
     runs-on: ubuntu-latest
     steps:
-      - name: Check for assignee
+      - name: Check for event name
         run: echo "${{ github.event_name }}"
+      - name: Check for event action
+        run: echo "{{ github.event.action }}"
 
