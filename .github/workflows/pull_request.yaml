@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check for assignee
-        run: echo "${{ github.event_name }}"
-        run: echo "${{ github.event.action }}"
+      - run: echo "${{ github.event_name }}"
+      - run: echo "${{ github.event.action }}"
         if: ${{ github.event_name == 'pull_request' && github.event.action == 'unassigned' }}
-        run: echo "This pull-request doesnot have assignee added"
+      - run: echo "This pull-request doesnot have assignee added"
 
