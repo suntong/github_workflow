@@ -1,7 +1,7 @@
 import sys
 def check_script():
     print(
-        "Success!!"
+        "Success!!!"
     )
 def another(
 
