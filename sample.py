@@ -1,2 +1,2 @@
 def check_script():
-    print("Success!!"
+    print("Success!!")
