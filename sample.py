@@ -1,2 +1,8 @@
+import sys
 def check_script():
-    print("Success!!")
+    print(
+        "Success!!"
+    )
+
+def another():
+    pass
