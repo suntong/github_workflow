@@ -1,0 +1,7 @@
+name: Demo
+on: [push]
+jobs:
+  List files:
+    steps:
+      - run: echo "Check for files"
+      - run: ls
