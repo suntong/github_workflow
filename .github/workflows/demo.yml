@@ -9,5 +9,5 @@ jobs:
   Install-Python:
     runs-on: ubuntu-latest
     steps:
-      - run: pip install python
+      - run: pip install requests
       - run: python -V
