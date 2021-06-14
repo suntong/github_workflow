@@ -6,3 +6,8 @@ jobs:
     steps:
       - run: echo "Check for files"
       - run: ls
+  Install-Python:
+    runs-on: ubuntu-latest
+    steps:
+      - run: pip install python
+      - run: python -V
