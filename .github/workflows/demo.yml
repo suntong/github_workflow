@@ -1,7 +1,7 @@
 name: Demo
 on: [push]
 jobs:
-  List files:
+  List-files:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Check for files"
