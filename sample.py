@@ -4,6 +4,5 @@ def check_script():
         "Success!!!"
     )
 def another(
-
 ):
     pass
