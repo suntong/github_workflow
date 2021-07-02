@@ -5,14 +5,15 @@ on:
       - test
       - !master
 jobs:
-  name: Create a empty file
-  steps:
-    - run: echo "Creating file"
-    - run: touch sample.js
-    - name: Commit changes
-      uses: EndBug/add-and-commit@v7
-      with:
-        author_name: Your Name
-        author_email: mail@example.com
-        message: 'Your commit message'
-        add: '*.js'
+  Create-empty-file:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Creating file"
+      - run: touch sample.js
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: Your Name
+          author_email: mail@example.com
+          message: 'Your commit message'
+          add: '*.js'
