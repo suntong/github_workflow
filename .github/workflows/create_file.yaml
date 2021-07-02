@@ -7,3 +7,4 @@ jobs:
     steps:
       - run: echo "Creating file"
       - run: touch sample.js
+      - run: ls -lah
