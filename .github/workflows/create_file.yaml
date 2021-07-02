@@ -16,4 +16,4 @@ jobs:
           author_name: Demo
           author_email: mail@example.com
           message: 'Your commit message'
-          add: '*.js'
+          add: sample.js
