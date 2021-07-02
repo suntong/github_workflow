@@ -5,11 +5,11 @@ jobs:
   Create-empty-file:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
       - run: echo "Creating file"
       - run: touch sample.js
       - run: ls -lah
-      - name: Checkout repo
-        uses: actions/checkout@v2
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
