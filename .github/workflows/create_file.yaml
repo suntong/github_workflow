@@ -3,17 +3,9 @@ on:
   push:
     branches:
       - test
-      - !master
 jobs:
   Create-empty-file:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Creating file"
       - run: touch sample.js
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v7
-        with:
-          author_name: Your Name
-          author_email: mail@example.com
-          message: 'Your commit message'
-          add: '*.js'
