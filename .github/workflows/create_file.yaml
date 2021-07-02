@@ -1,8 +1,6 @@
 name: Create file
 on:
-  push:
-    branches:
-      - test
+  push
 jobs:
   Create-empty-file:
     runs-on: ubuntu-latest
