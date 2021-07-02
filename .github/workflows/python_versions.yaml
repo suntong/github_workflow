@@ -2,7 +2,7 @@ name: Install SDK with different Python versions.
 on:
   push:
     branches:
-      - test
+      - 'test'
 jobs:
   install-sdk:
     runs-on: ${{ matrix.os }}
