@@ -29,7 +29,7 @@ jobs:
               - sample.py
               - demo/**/*.py
     - name: Lint Changed Files
-      if: github.event_name == 'pull_request' && steps.changed-files.outputs.files == 'true'
+      if: steps.changed-files.outputs.files == 'true'
       run: |
         pip install flake8
         flake8 ${{ join(fromJSON(steps.changed-files.outputs.salt_files), ' ') }}
