@@ -1,0 +1,28 @@
+name: Install SDK with different Python versions.
+on:
+  push:
+    branches:
+      - 'test'
+jobs:
+  install-sdk:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ['2.7', '3.6', '3.7', '3.8', 'pypy-2.7', 'pypy-3.6']
+        exclude:
+          - os: ubuntu-latest
+            python-version: '3.8'
+          - os: windows-latest
+            python-version: '3.6'
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
+      - name: Install Cohesity Python SDK
+        run: python -m pip install cohesity_management_sdk
+        run: pip list | grep cohesity
