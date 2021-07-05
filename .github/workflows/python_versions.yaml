@@ -25,4 +25,5 @@ jobs:
         run: python -c "import sys; print(sys.version)"
       - name: Install Cohesity Python SDK
         run: python -m pip install cohesity_management_sdk
+      - name: Check for Cohesity Python SDK
         run: pip list | grep cohesity
