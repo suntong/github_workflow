@@ -17,7 +17,19 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Lint with flake8
+    - id: changed-files
+      name: Get changed files
+      uses: dorny/paths-filter@v2
+      with:
+        token: ${{ github.token }}
+        list-files: json
+        filters: |
+          files:
+            - added|modified:
+              - *.py
+              - demo/**/*.py
+    - name: Lint Changed Files
+      if: github.event_name == 'pull_request' && steps.changed-files.outputs.files == 'true'
       run: |
         pip install flake8
         flake8 .
