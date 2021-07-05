@@ -32,7 +32,7 @@ jobs:
       if: steps.changed-files.outputs.files == 'true'
       run: |
         pip install flake8
-        flake8 ${{ join(fromJSON(steps.changed-files.outputs.files), ' ') }}
+        ls ${{ join(fromJSON(steps.changed-files.outputs.files_files), ' ') }}
 
   run-Black:
     name: Run linters
