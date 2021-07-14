@@ -9,11 +9,11 @@ jobs:
         uses: actions/checkout@v2
       - run: |
           echo "Creating file"
-          touch sample2.js
-          ls -lah
           echo "today=$(date -I)" >> $GITHUB_ENV
+          touch sample_${{ env.today }}.js
+          ls -lah
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
-          message: "added on ${today}"
+          message: "added on ${{ env.today }}"
