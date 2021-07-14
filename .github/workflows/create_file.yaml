@@ -17,4 +17,5 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
+          default_author: user_info
           message: "added on ${{ env.today }}"
