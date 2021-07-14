@@ -9,8 +9,9 @@ jobs:
         uses: actions/checkout@v2
       - run: |
           echo "Creating file"
-          echo "today=$(date -I)" >> $GITHUB_ENV
-          touch sample_${{ env.today }}.js
+          today=$(date -I)
+          echo "today=$today" >> $GITHUB_ENV
+          touch sample_$today.js
           ls -lah
 
       - name: Commit changes
