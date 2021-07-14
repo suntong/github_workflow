@@ -7,13 +7,13 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-      - run: echo "Creating file"
-      - run: touch sample.js
-      - run: ls -lah
+      - run: |
+          echo "Creating file"
+          touch sample2.js
+          ls -lah
+          echo "today=$(date -I)" >> $GITHUB_ENV
+
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
-          author_name: Demo
-          author_email: mail@example.com
-          message: 'Your commit message'
-          add: sample.js
+          message: "added on ${today}"
